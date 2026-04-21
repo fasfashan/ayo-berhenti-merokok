@@ -93,6 +93,7 @@ export default function App() {
                 dateStr={today}
                 dayLog={logs[today] || {}}
                 phase={phase}
+                phaseIndex={phaseIndex}
                 onUpdateSession={updateSession}
                 onUpdateNote={updateNote}
               />
