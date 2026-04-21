@@ -9,7 +9,7 @@ export default function PhaseCard({ phase, startDate }) {
   const weekNum = Math.ceil(dayNum / 7)
 
   return (
-    <div className="border border-gray-200 rounded-xl p-4 border-t-[3px] border-t-[#2563eb]">
+    <div className="border bg-white border-gray-200 rounded-xl p-4 border-t-[3px] border-t-[#2563eb]">
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1">
           <p className="text-xs text-gray-400 uppercase tracking-wider font-medium">

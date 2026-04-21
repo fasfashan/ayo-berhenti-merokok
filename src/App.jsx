@@ -5,6 +5,7 @@ import DailyLog from './components/DailyLog'
 import Stats from './components/Stats'
 import './App.css'
 
+
 const LS_LOGS = 'vt_logs_v1'
 const LS_START = 'vt_start_v1'
 
@@ -70,10 +71,10 @@ export default function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
-      <div className="max-w-md mx-auto min-h-screen flex flex-col">
+    <div className="min-h-screen bg-neutral-100" style={{ fontFamily: "'Inter', system-ui, sans-serif" }}>
+      <div className="max-w-md mx-auto min-h-screen flex flex-col p-4">
 
-        <header className="px-4 pt-5 pb-4 border-b border-gray-100">
+        <header className="px-4  bg-white pt-5 pb-4 border-b border-gray-200 rounded-xl mb-8 ">
           <div className="flex items-baseline justify-between">
             <h1 className="text-base font-semibold text-gray-900 tracking-tight">Pod Tracker</h1>
             <span className="text-xs text-gray-400">Fase {phaseIndex + 1} / 5</span>
@@ -81,9 +82,9 @@ export default function App() {
           <p className="text-sm text-gray-400 mt-0.5">{formatDate(today)}</p>
         </header>
 
-        <main className="flex-1 pb-20 overflow-auto">
+        <main className="flex-1 pb-14 overflow-auto">
           {tab === 'today' ? (
-            <div className="px-4 py-4 flex flex-col gap-4">
+            <div className=" flex flex-col gap-4">
               <PhaseCard
                 phase={phase}
                 startDate={startDate}
@@ -110,8 +111,8 @@ export default function App() {
           )}
         </main>
 
-        <nav className="fixed bottom-4 left-0 right-0 max-w-md mx-auto shadow-2xl bg-white border  rounded-xl border-gray-100">
-          <div className="flex">
+        <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto shadow-2xl bg-white border border-gray-200   border-gray-100">
+          <div className="flex max-w-md mx-auto">
             {[['today', 'Hari Ini'], ['stats', 'Statistik']].map(([id, label]) => (
               <button
                 key={id}
